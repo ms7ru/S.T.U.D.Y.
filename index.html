@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S.T.U.D.Y. - Struggle To Unite Dual Yous</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <a href="#" class="tutorial-link" onclick="showTutorial(); return false;">How to Play</a>
+
+  <!-- Tutorial Popup -->
+  <div id="tutorial-popup" class="popup-overlay" style="display: none;">
+    <div class="popup-content">
+      <h2>How to Play: S.T.U.D.Y.</h2>
+      <p><strong>Objective:</strong> Two players embody the conflict between their <em>Past Self</em> and <em>Future Self</em>. The goal is to outwit your opponent and achieve your desired outcome—either succumbing to distractions or enforcing discipline.</p>
+      
+      <p><strong>Setup:</strong></p>
+      <ul>
+        <li><strong>Past Self Player:</strong> Represents your procrastinating tendencies.</li>
+        <li><strong>Future Self Player:</strong> Represents your disciplined aspirations.</li>
+        <li>The game alternates between turns where each player makes strategic choices.</li>
+      </ul>
+
+      <p><strong>Gameplay Instructions:</strong></p>
+      <ol>
+        <li><strong>Understand the Scenario:</strong>
+          <ul>
+            <li>Each round begins with a scenario (e.g., preparing for an exam or avoiding homework). The situation is displayed at the top of the game screen.</li>
+          </ul>
+        </li>
+        <li><strong>Choose Wisely:</strong>
+          <ul>
+            <li><strong>Past Self Turn:</strong> The Past Self selects a procrastination tactic from the available choices.</li>
+            <li><strong>Future Self Turn:</strong> The Future Self picks a counteraction to disrupt the Past Self's plan.</li>
+          </ul>
+        </li>
+        <li><strong>Score Points:</strong>
+          <ul>
+            <li>After both players have chosen, the game determines the winner of the round based on strategy and randomness:
+              <ul>
+                <li>If <strong>Past Self Wins</strong>, procrastination prevails, and the Past Self gains a point.</li>
+                <li>If <strong>Future Self Wins</strong>, discipline triumphs, and the Future Self scores a point.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><strong>First to 5 Wins:</strong>
+          <ul>
+            <li>The game continues with different scenarios until either the Past Self or the Future Self scores 5 points, declaring them the winner.</li>
+          </ul>
+        </li>
+      </ol>
+
+      <button class="start-button" onclick="closeTutorial()">Start Game</button>
+    </div>
+  </div>
+
+  <script src="https://static.elfsight.com/platform/platform.js" async></script>
+  <div class="elfsight-app-8ce979bb-5626-49ac-9261-a145bd9d5fac" data-elfsight-app-lazy></div>
+  <div class="game-container">
+    <div class="characters-container">
+      <div class="past-self-sprite"></div>
+      <div class="future-self-sprite"></div>
+    </div>
+    <img src="./hed.png" alt="Hed Logo" class="hed-logo">
+    
+    <div class="score-board">
+      <div class="past-self">Past Self: <span id="past-score">0</span></div>
+      <div class="future-self">Future Self: <span id="future-score">0</span></div>
+    </div>
+    <div id="turn-indicator" class="turn-indicator"></div>
+    <div id="story-text" class="story-text"></div>
+    <div id="choices" class="choices"></div>
+    <div id="result" class="result"></div>
+    <div id="game-over" class="game-over" style="display: none;"></div>
+  </div>
+
+  <div class="container">
+    <img id="animatedImage" src="" width="100px" />
+</div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
